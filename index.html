@@ -1,161 +1,47 @@
-<section class="portfolio">
-    <div class="portfolio-header">
-        <h2 class="portfolio-title">Curated Cultural Narratives</h2>
-        <p class="portfolio-subtitle">Transforming raw moments into compelling visual stories</p>
-    </div>
+<section class="portfolio" style="background-color: var(--soft-cream); padding: 6rem 5%; text-align: center;">
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 2.8rem; margin-bottom: 1rem; color: var(--earth-tone-dark);">Portfolio of Cultural Narratives</h2>
+    <p style="color: var(--earth-tone-dark); opacity: 0.8; margin-bottom: 3rem;">Where travel footage becomes a passport to understanding</p>
     
-    <div class="portfolio-grid">
-        <div class="portfolio-item elegant-card">
-            <div class="portfolio-image-container">
-                <img src="/api/placeholder/600/400" alt="Food Tour Project" class="portfolio-image">
-                <div class="image-overlay"></div>
+    <div class="portfolio-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
+        <div class="portfolio-item" style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.1); transition: all 0.3s ease; position: relative;">
+            <div style="position: relative; overflow: hidden;">
+                <img src="/api/placeholder/600/400" alt="Food Tour Project" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s ease;">
             </div>
-            <div class="portfolio-item-content">
-                <h3 class="project-title">Street Food Chronicles</h3>
-                <p class="project-description">A cinematic exploration transforming 6 hours of street food footage into a 15-minute sensory narrative that transcends traditional travel documentation.</p>
-                <div class="project-tags">
-                    <span class="tag">Culinary Storytelling</span>
-                    <span class="tag">Cultural Immersion</span>
-                </div>
+            <div class="portfolio-item-content" style="padding: 1.5rem; text-align: left;">
+                <h3 style="font-family: 'Playfair Display', serif; margin-bottom: 0.75rem; color: var(--earth-tone-dark);">Street Food Chronicles</h3>
+                <p>Transformed 6 hours of street food exploration into a 15-minute culinary journey that feels like a sensory adventure.</p>
             </div>
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 5px; background-color: var(--accent-spice);"></div>
         </div>
-        <div class="portfolio-item elegant-card">
-            <div class="portfolio-image-container">
-                <img src="/api/placeholder/600/400" alt="Expat Tips Project" class="portfolio-image">
-                <div class="image-overlay"></div>
+        <div class="portfolio-item" style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.1); transition: all 0.3s ease; position: relative;">
+            <div style="position: relative; overflow: hidden;">
+                <img src="/api/placeholder/600/400" alt="Expat Tips Project" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s ease;">
             </div>
-            <div class="portfolio-item-content">
-                <h3 class="project-title">Global Citizen Series</h3>
-                <p class="project-description">An innovative video series that elevates practical expatriate insights into compelling, nuanced storytelling for modern nomads.</p>
-                <div class="project-tags">
-                    <span class="tag">Expat Narratives</span>
-                    <span class="tag">Lifestyle Design</span>
-                </div>
+            <div class="portfolio-item-content" style="padding: 1.5rem; text-align: left;">
+                <h3 style="font-family: 'Playfair Display', serif; margin-bottom: 0.75rem; color: var(--earth-tone-dark);">Expat Survival Guide</h3>
+                <p>Created an engaging video series that turns practical information into compelling storytelling for new global citizens.</p>
             </div>
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 5px; background-color: var(--accent-spice);"></div>
         </div>
-        <div class="portfolio-item elegant-card">
-            <div class="portfolio-image-container">
-                <img src="/api/placeholder/600/400" alt="Travel Vlog Project" class="portfolio-image">
-                <div class="image-overlay"></div>
+        <div class="portfolio-item" style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.1); transition: all 0.3s ease; position: relative;">
+            <div style="position: relative; overflow: hidden;">
+                <img src="/api/placeholder/600/400" alt="Travel Vlog Project" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s ease;">
             </div>
-            <div class="portfolio-item-content">
-                <h3 class="project-title">Uncharted Perspectives</h3>
-                <p class="project-description">A meticulously crafted visual journey that penetrates beyond superficial travel imagery, revealing the intricate soul of unexplored destinations.</p>
-                <div class="project-tags">
-                    <span class="tag">Documentary Style</span>
-                    <span class="tag">Cultural Depth</span>
-                </div>
+            <div class="portfolio-item-content" style="padding: 1.5rem; text-align: left;">
+                <h3 style="font-family: 'Playfair Display', serif; margin-bottom: 0.75rem; color: var(--earth-tone-dark);">Off the Beaten Path</h3>
+                <p>Crafted a narrative that reveals the soul of a destination, moving beyond tourist snapshots to genuine cultural insight.</p>
             </div>
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 5px; background-color: var(--accent-spice);"></div>
         </div>
     </div>
 </section>
 
 <style>
-    .portfolio {
-        background-color: var(--soft-cream);
-        padding: 8rem 7%;
-        font-family: 'Montserrat', sans-serif;
+    .portfolio-item:hover {
+        transform: scale(1.03);
+        box-shadow: 0 20px 45px rgba(0,0,0,0.15);
     }
-
-    .portfolio-header {
-        text-align: center;
-        margin-bottom: 4rem;
-    }
-
-    .portfolio-title {
-        font-family: 'Playfair Display', serif;
-        font-size: 3rem;
-        color: var(--earth-tone-dark);
-        margin-bottom: 1rem;
-        letter-spacing: -1px;
-    }
-
-    .portfolio-subtitle {
-        font-size: 1.1rem;
-        color: var(--earth-tone-dark);
-        opacity: 0.7;
-    }
-
-    .portfolio-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 3rem;
-    }
-
-    .elegant-card {
-        background: white;
-        border-radius: 12px;
-        box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-        overflow: hidden;
-        transition: all 0.4s ease-in-out;
-        border: 1px solid rgba(74,66,56,0.05);
-    }
-
-    .elegant-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 30px 50px rgba(0,0,0,0.1);
-    }
-
-    .portfolio-image-container {
-        position: relative;
-        overflow: hidden;
-    }
-
-    .portfolio-image {
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-        transition: transform 0.4s ease;
-    }
-
-    .image-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(transparent 60%, rgba(74,66,56,0.7));
-        opacity: 0;
-        transition: opacity 0.4s ease;
-    }
-
-    .elegant-card:hover .image-overlay {
-        opacity: 1;
-    }
-
-    .elegant-card:hover .portfolio-image {
+    .portfolio-item:hover img {
         transform: scale(1.05);
-    }
-
-    .portfolio-item-content {
-        padding: 2rem;
-    }
-
-    .project-title {
-        font-family: 'Playfair Display', serif;
-        font-size: 1.5rem;
-        color: var(--earth-tone-dark);
-        margin-bottom: 1rem;
-    }
-
-    .project-description {
-        color: var(--earth-tone-dark);
-        opacity: 0.8;
-        line-height: 1.7;
-        margin-bottom: 1.5rem;
-    }
-
-    .project-tags {
-        display: flex;
-        gap: 0.75rem;
-    }
-
-    .tag {
-        background-color: var(--earth-tone-light);
-        color: var(--earth-tone-dark);
-        padding: 0.4rem 0.8rem;
-        border-radius: 20px;
-        font-size: 0.8rem;
-        font-weight: 500;
     }
 </style>
