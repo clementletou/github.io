@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wanderlust Weaver - Transforming travel moments into cinematic narratives that inspire, inform, and ignite wanderlust.">
     <title>Wanderlust Weaver | Travel & Food Story Editor</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -12,215 +14,164 @@
             --accent-spice: #B7532D;
             --soft-cream: #F5F5F0;
         }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: 'Montserrat', sans-serif;
             line-height: 1.6;
             background-color: var(--soft-cream);
             color: var(--earth-tone-dark);
         }
-        .hero {
-            background: linear-gradient(rgba(74,66,56,0.7), rgba(74,66,56,0.7)), 
-                        url('/api/placeholder/1600/900');
+
+        header,
+        section {
+            padding: 4rem 5%;
+        }
+
+        header.hero {
+            background: linear-gradient(rgba(74, 66, 56, 0.7), rgba(74, 66, 56, 0.7)), url('/api/placeholder/1600/900.webp');
             background-size: cover;
             background-position: center;
-            color: white;
             text-align: center;
-            padding: 20vh 5%;
+            color: white;
             position: relative;
             overflow: hidden;
         }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' transform='rotate(45)' opacity='0.2' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 0 L100 50 L50 100 L0 50 Z' fill='%23E6D2B5'/%3E%3C/svg%3E");
-            z-index: 1;
-        }
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-        .hero h1 {
+
+        header.hero h1 {
             font-family: 'Playfair Display', serif;
             font-size: 3.5rem;
-            font-weight: 700;
             margin-bottom: 1rem;
-            letter-spacing: -1px;
         }
+
+        header.hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        section {
+            margin-top: 4rem;
+        }
+
         .journey-philosophy {
-            background-color: white;
-            padding: 6rem 10%;
             display: flex;
-            align-items: center;
-            gap: 4rem;
+            flex-wrap: wrap;
+            gap: 2rem;
+            background: white;
         }
+
         .journey-text {
             flex: 1;
+            min-width: 300px;
         }
-        .journey-image {
-            flex: 1;
-        }
+
         .journey-image img {
             width: 100%;
             border-radius: 10px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
         }
-        .portfolio {
-            background-color: var(--soft-cream);
-            padding: 6rem 5%;
-            text-align: center;
-        }
+
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin-top: 3rem;
         }
+
         .portfolio-item {
             background: white;
             border-radius: 10px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
         .portfolio-item:hover {
             transform: scale(1.05);
-            box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
         }
-        .portfolio-item img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-        }
-        .portfolio-item-content {
-            padding: 1.5rem;
-            text-align: left;
-        }
+
         .cta {
+            text-align: center;
             background: linear-gradient(135deg, var(--earth-tone-dark), #5D5246);
             color: white;
-            text-align: center;
-            padding: 6rem 5%;
         }
-        .cta-button {
+
+        .cta a {
             display: inline-block;
-            background-color: var(--accent-spice);
+            background: var(--accent-spice);
             color: white;
             padding: 1rem 2.5rem;
             text-decoration: none;
             border-radius: 50px;
-            font-weight: 600;
-            transition: all 0.3s ease;
+            font-weight: bold;
+            transition: background 0.3s ease, color 0.3s ease;
         }
-        .cta-button:hover {
-            background-color: var(--earth-tone-light);
+
+        .cta a:hover {
+            background: var(--earth-tone-light);
             color: var(--earth-tone-dark);
         }
-        .map-story {
-            background-color: white;
-            padding: 6rem 10%;
-            text-align: center;
-        }
-        .map-content {
-            display: flex;
-            align-items: center;
-            gap: 3rem;
-        }
-        .map-text {
-            flex: 2;
-            text-align: left;
-        }
-        .map-visual {
-            flex: 1;
-            position: relative;
-        }
-        .map-visual::before {
-            content: '✈️';
-            position: absolute;
-            font-size: 5rem;
-            top: -50px;
-            left: -50px;
-            opacity: 0.2;
-            z-index: 1;
+
+        @media (max-width: 768px) {
+            .journey-philosophy {
+                flex-direction: column;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
+
 <body>
-    <section class="hero">
+    <header class="hero" aria-labelledby="hero-title">
         <div class="hero-content">
-            <h1>Stories Beyond Borders</h1>
+            <h1 id="hero-title">Stories Beyond Borders</h1>
             <p>Transforming travel moments into cinematic narratives that inspire, inform, and ignite wanderlust</p>
         </div>
-    </section>
+    </header>
 
-    <section class="journey-philosophy">
-        <div class="journey-text">
-            <h2>More Than an Editor. A Story Curator.</h2>
-            <p>Every frame tells a story. Every cut is a bridge between cultures. I don't just edit videos - I translate experiences, turning raw travel footage into immersive journeys that make viewers feel like they're right there with you.</p>
-            <br>
-            <p>From street food adventures in Bangkok to hidden gems in remote European villages, I understand that travel is about connection, not just destination.</p>
-        </div>
-        <div class="journey-image">
-            <img src="/api/placeholder/600/600" alt="Editor's Travel Journey">
-        </div>
-    </section>
-
-    <section class="map-story">
-        <h2>The Map is Not the Territory</h2>
-        <div class="map-content">
-            <div class="map-text">
-                <h3>A Personal Journey of Translation</h3>
-                <p>As an expat myself, I know that true travel content isn't about showing places - it's about revealing stories. I've lived the expat life, felt the confusion, excitement, and transformation that comes from stepping into unknown territories.</p>
-                <br>
-                <p>My editing doesn't just showcase locations. It captures the emotional landscape of discovery, the subtle nuances of cultural navigation, and the universal human experiences that connect us across continents.</p>
+    <main>
+        <section class="journey-philosophy">
+            <div class="journey-text">
+                <h2>More Than an Editor. A Story Curator.</h2>
+                <p>Every frame tells a story. Every cut is a bridge between cultures. I don't just edit videos - I translate experiences, turning raw travel footage into immersive journeys.</p>
             </div>
-            <div class="map-visual">
-                <img src="/api/placeholder/500/500" alt="Personal Travel Map">
+            <div class="journey-image">
+                <img src="/api/placeholder/600/600.webp" alt="Travel Editor at work">
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="portfolio">
-        <h2>Portfolio of Cultural Narratives</h2>
-        <p>Where travel footage becomes a passport to understanding</p>
-        
-        <div class="portfolio-grid">
-            <div class="portfolio-item">
-                <img src="/api/placeholder/600/400" alt="Food Tour Project">
-                <div class="portfolio-item-content">
-                    <h3>Street Food Chronicles</h3>
-                    <p>Transformed 6 hours of street food exploration into a 15-minute culinary journey that feels like a sensory adventure.</p>
+        <section class="portfolio">
+            <h2>Portfolio of Cultural Narratives</h2>
+            <p>Where travel footage becomes a passport to understanding</p>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="/api/placeholder/600/400.webp" alt="Food Tour Project">
+                    <div class="portfolio-item-content">
+                        <h3>Street Food Chronicles</h3>
+                        <p>Transformed 6 hours of street food exploration into a 15-minute culinary journey.</p>
+                    </div>
                 </div>
             </div>
-            <div class="portfolio-item">
-                <img src="/api/placeholder/600/400" alt="Expat Tips Project">
-                <div class="portfolio-item-content">
-                    <h3>Expat Survival Guide</h3>
-                    <p>Created an engaging video series that turns practical information into compelling storytelling for new global citizens.</p>
-                </div>
-            </div>
-            <div class="portfolio-item">
-                <img src="/api/placeholder/600/400" alt="Travel Vlog Project">
-                <div class="portfolio-item-content">
-                    <h3>Off the Beaten Path</h3>
-                    <p>Crafted a narrative that reveals the soul of a destination, moving beyond tourist snapshots to genuine cultural insight.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="cta">
-        <h2>Let's Craft Your Global Story</h2>
-        <p>Your journey is unique. Your video should be too.</p>
-        <a href="mailto:globalnarratives@storytellers.com" class="cta-button">Start Your Story</a>
-    </section>
+        <section class="cta">
+            <h2>Let's Craft Your Global Story</h2>
+            <a href="mailto:globalnarratives@storytellers.com">Start Your Story</a>
+        </section>
+    </main>
 </body>
+
 </html>
